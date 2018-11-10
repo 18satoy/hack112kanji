@@ -14,7 +14,7 @@ def events():
 			sys.exit()
 
 # define display surface			
-W, H = 1280, 720
+W, H = 900, 680
 HW, HH = W // 2, H // 2
 AREA = W * H
 
