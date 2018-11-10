@@ -12,14 +12,10 @@ class dialogue(object):
         "line16", "line17", "line18", "line19", "line20"]
         # self.text = getTextList(dialogueText.txt)
 
-    def loadImages(self):
-        for textImage in self.textImages:
-            textImage = pygame.image.load("textsFiles'\'" + str(image) + ".png")
-
     def drawBox(self, screen, textImages, num):
         x, y, width, height = self.x, self.y, self.width, self.height
         pygame.draw.rect(screen, colorSheet.darkGray, (x, y, width, height))
-        image = pygame.image.load("textsFiles\\" + str(textImages[num])\
+        image = pygame.image.load("textsFiles/" + str(textImages[num])\
             + ".png")
         screen.blit(image, (x, y))
 
