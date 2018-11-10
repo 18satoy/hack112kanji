@@ -4,19 +4,24 @@
 import pygame
 from colorSheet import *
 from pygame.locals import *
+from dialogueBox import *
 from sys import exit
 
 pygame.init()
 pygame.display.set_caption("Write Kanji!")
 clock = pygame.time.Clock()
-window = pygame.display.set_mode((500,500))
-writing = pygame.Surface((500,500))
+window = pygame.display.set_mode((300,200))
+#Set-up the writing layer
+writing = pygame.Surface((300,200))
 writing.fill(white)
-writing.set_alpha(150)
-chara = pygame.image.load("images/charaKi.jpg").convert()
+writing.set_alpha(150) #transparency
+
+charaList = [hito, sora, ki, hana, kawa]
+
+i = 0
+
 mouse_pos = None
 isDrawing = False
-canvasSize = (500,500)
 running = True
 
 class Brush(object):
@@ -28,6 +33,13 @@ brush = Brush()
 try:
     while running:
         time = clock.tick(500) #similar to timerDelay
+        if i < len(charaList):
+            chara = charaList[i]
+            chara.image = pygame.image.load(chara.path).convert()
+
+        if chara.isDone():
+            writing.fill(white)
+            i+=1
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -38,7 +50,8 @@ try:
 
             if event.type == pygame.KEYDOWN:
                 if event.key == 114: #"r"
-                    window.fill(white)
+                    writing.fill(white)
+                    chara.strokeDone = 0
 
             if isDrawing:
                 if event.type == pygame.MOUSEBUTTONDOWN and mouse_pos == None:
@@ -50,11 +63,12 @@ try:
                     mouse_pos = mouse_pos2
 
                 if pygame.mouse.get_pressed()==(0,0,0):
+                    chara.strokeDone+=1
                     isDrawing = False
                     mouse_pos = None
 
         pygame.display.update()
-        window.blit(chara,(0,0))
+        window.blit(chara.image,(50,0))
         window.blit(writing,(0,0))
 
     pygame.quit()
