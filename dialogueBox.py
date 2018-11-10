@@ -1,37 +1,21 @@
 import pygame
 import colorSheet
 
-def readFile(path):
-    with open(path, "rt") as f:
-        return f.read()
-
-def getTextList(path):
-    result = []
-    resultNum = 0
-    fullText = readFile(path)
-    for line in fullText.splitlines():
-        if line[0] == "#":
-            continue
-        else:
-            start = line.find(")")
-            if start != -1:
-                resultNum += 1
-                result.append([">>>" + line[start + 1:]])
-            else:
-                result[resultNum - 1].append(line)
-    return result
-
 class dialogue(object):
     def __init__(self, x, y, width, height):
         self.x = x
         self.y = y
         self.width = width
         self.height = height
-        self.text = getTextList(dialogueText.txt)
+        self.textImages = ["line1.png", "line2.png", "line3.png", "line4.png", 
+        "line5.png", "line6.png", "line7.png", "line8.png", "line9.png", 
+        "line10.png", "line11.png", "line12.png", "line13.png", "line14.png", 
+        "line15.png", "line16.png", "line17.png", "line18.png", "line19.png", 
+        "line20.png"]
+        # self.text = getTextList(dialogueText.txt)
 
     def drawBox(self, screen):
         x, y, width, height = self.x, self.y, self.width, self.height
         pygame.draw.rect(screen, colorSheet.darkGray, (x, y, width, height))
-
-    def drawText(self, screen):
-        
+        screen.blit(screen, "line1.png", self.x, self.y)
+    # def drawText(self, screen):
