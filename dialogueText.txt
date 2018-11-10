@@ -3,7 +3,6 @@ Welcome to the Kanji tutorial game!
 
 Trace the lines in the box to the right in the correct order to write your first Kanji. 
 
-
 This is the character for "person". 
 Our character looks lonely in the empty field... Move forward using the right arrow to see if there is anything else!
 
@@ -26,5 +25,15 @@ The sky is looking pretty bleak right now... Maybe there will be better weather 
 Trace the lines in the box to the right in the correct order to write your fourth Kanji. Youre're almost done!
 
 This is the character for "sky".
+
+The sky is so beautiful today!
+
+I think our character is feeling a bit thirsty. Let's go look for somewhere to find a drink. 
+
+Trace the lines in the box to the right in the correct order to write your final Kanji. 
+
+This is the character for "river". 
+
+The scenery is so beautiful here! Congratulations on finishing the tutorial stage of the Kanji game!!
 
 
