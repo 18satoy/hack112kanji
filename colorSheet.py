@@ -3,6 +3,8 @@
 
 import pygame
 
+transparent = pygame.Color(255,255,255)
+
 #White, Black, and Shades 
 white = pygame.Color(255,255,255)
 black = pygame.Color(0,0,0)
