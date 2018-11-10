@@ -12,8 +12,8 @@ class kanji (object):
     #drawing the box image in the correct position
         upperLeftX = 0
         upperLeftY = 0
-        lowerRightX = width         #width of large canvas
-        lowerRightY = height - groundHeight     #height of large canvas
+        lowerRightX = width #width of large canvas
+        lowerRightY = height #height of large canvas
         screen.blit(self.image, upperLeftX, upperLeftY, lowerRightX, lowerRightY)
 
 class tree (kanji):
