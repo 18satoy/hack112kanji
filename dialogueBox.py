@@ -34,7 +34,6 @@ class kanjiWriting(object):
     def writing(self):
         self.strokeDone+=1
 
-    #def self.checkpoint
 
 hito = kanjiWriting("images/Kanji/charaHito.png", 2)
 sora = kanjiWriting("images/Kanji/charaSora.png", 8)

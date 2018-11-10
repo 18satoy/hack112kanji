@@ -2,6 +2,7 @@ import pygame
 
 from pygamegame import PygameGame
 import mouseTracking
+from mouseTracking import *
 import dialogueBox
 
 class drawDialogueBox(PygameGame):
@@ -11,11 +12,15 @@ class drawDialogueBox(PygameGame):
         self.boxHeight = 200
         self.dialogue = dialogueBox.dialogue(self.margin, self.margin + self.boxHeight * 2,
             self.boxWidth, self.boxHeight)
-        self.mouseWindow = mouseTracking.window
+        self.drawWindow = mouseTracking.drawWindow()
+        self.step = 0
+        #self.
 
     def redrawAll(self, screen):
         self.dialogue.drawBox(screen)
-        screen.blit(self.mouseWindow, (0, 0))
+        #screen.blit(self.mouseWindow, (0, 0))
+
+
 
 # class drawText(PygameGame):
 #     def init(self, filePath):
@@ -24,3 +29,4 @@ class drawDialogueBox(PygameGame):
 
 game = drawDialogueBox(1000, 620)
 game.run()
+mouse.run()
