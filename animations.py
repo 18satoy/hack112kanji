@@ -28,9 +28,9 @@ class drawDialogueBox(PygameGame):
             self.walk.append(pygame.image.load(sprite))
         self.playerWidth, self.playerHeight = self.walk[0].get_rect().size
         
-        self.playerR = self.playerWidth // 2
+        self.playerR = self.playerWidth
         self.rPosX = self.playerR
-        self.playerPosX = self.playerR
+        self.playerPosX = 20
         self.playerPosY = 220 + (self.playerHeight // 2)
         self.speed = 0
         
@@ -86,7 +86,7 @@ class drawDialogueBox(PygameGame):
         k = pygame.key.get_pressed()
         
         if k[K_RIGHT]:
-            self.speed = 1
+            self.speed = 5
             self.player = self.walk[self.count]
             self.count += 1
             
@@ -98,20 +98,21 @@ class drawDialogueBox(PygameGame):
         
         self.playerPosX += self.speed
         if self.playerPosX > self.viewWidth - self.playerR: 
-            self.playerPosX = self.viewWidth - self.playerR
+            self.playerPosX = self.viewWidth - self.playerR 
         if self.playerPosX < self.playerR: self.playerPosX = self.playerR
         if self.playerPosX < self.startScrollX: self.rPosX = self.playerPosX
         elif self.playerPosX > self.viewWidth - self.startScrollX: 
             self.rPosX = self.playerPosX - self.viewWidth + 1000
         else:
-            self.rPosX = self.startScrollX
-            self.stagePosX += -self.speed
+            self.playerPosX = self.startScrollX
+            self.stagePosX -= self.speed
             
         rel_x = self.stagePosX % self.bgWidth
         screen.blit(self.bg, (rel_x - self.bgWidth, 0))
         if rel_x < 1000:
             screen.blit(self.bg, (rel_x, 0))
         
+        pygame.time.Clock().tick(20)
         screen.blit(self.player, (self.playerPosX, self.playerPosY))
         
         self.dialogue.drawBox(screen, self.dialogue.textImages, self.gamePosition)
