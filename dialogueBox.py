@@ -7,18 +7,21 @@ class dialogue(object):
         self.y = y
         self.width = width
         self.height = height
-        self.textImages = ["line1.png", "line2.png", "line3.png", "line4.png", 
-        "line5.png", "line6.png", "line7.png", "line8.png", "line9.png", 
-        "line10.png", "line11.png", "line12.png", "line13.png", "line14.png", 
-        "line15.png", "line16.png", "line17.png", "line18.png", "line19.png", 
-        "line20.png"]
+        self.textImages = ["line1", "line2", "line3", "line4", "line5", "line6", "line7", "line8",
+        "line9", "line10", "line11", "line12", "line13", "line14", "line15", 
+        "line16", "line17", "line18", "line19", "line20"]
         # self.text = getTextList(dialogueText.txt)
 
-    def drawBox(self, screen):
+    def loadImages(self):
+        for textImage in self.textImages:
+            textImage = pygame.image.load("textsFiles'\'" + str(image) + ".png")
+
+    def drawBox(self, screen, textImages, num):
         x, y, width, height = self.x, self.y, self.width, self.height
         pygame.draw.rect(screen, colorSheet.darkGray, (x, y, width, height))
-        # screen.blit(screen, "line1.png", self.x, self.y)
-    # def drawText(self, screen):
+        image = pygame.image.load("textsFiles\\" + str(textImages[num])\
+            + ".png")
+        screen.blit(image, (x, y))
 
 class kanjiWriting(object):
     def __init__(self, path, stroke):
