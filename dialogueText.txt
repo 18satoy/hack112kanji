@@ -1,30 +1,42 @@
 # Starting screen
-Welcome to the Kanji tutorial game!
-
-Trace the lines in the box to the right in the correct order to write your first Kanji. 
-
-
-This is the character for "person". 
-Our character looks lonely in the empty field... Move forward using the right arrow to see if there is anything else!
-
-Trace the lines in the box to the right in the correct order to write your second Kanji.
-
-This is the character for "tree". 
-
-Look! now a tree has appeared on our field!
-
-I think I smell the scent of flowers! Let's go look for them. 
-
-Trace the lines in the box to the right in the correct order to write your third Kanji. This is pretty difficult, just make sure to follow the guiding lines!
-
-This is the character for "flower". 
-
-Wow! now our field if full of pretty flowers!
-
-The sky is looking pretty bleak right now... Maybe there will be better weather across the field over there. 
-
-Trace the lines in the box to the right in the correct order to write your fourth Kanji. Youre're almost done!
-
-This is the character for "sky".
-
-
+1)Welcome to the Kanji tutorial game!
+2)Trace the lines in the box to the right
+in the correct order to write your
+first Kanji.
+3)This is the character for "person".
+4)Our character looks lonely in the empty
+field... Move forward using the right
+arrow to see if there is anything else!
+5)Trace the lines in the box to the right
+in the correct order to write your
+second Kanji.
+6)This is the character for "tree".
+7)Look! now a tree has appeared on our
+field!
+8)I think I smell the scent of flowers!
+Let's go look for them.
+9)Trace the lines in the box to the right
+in the correct order to write your third
+Kanji. This is pretty difficult, just
+make sure to follow the guiding lines!
+10)This is the character for "flower".
+11)Wow! now our field if full of pretty
+flowers!
+12)The sky is looking pretty bleak right
+now... Maybe there will be better
+weather across the field over there.
+13)Trace the lines in the box to the right
+in the correct order to write your
+fourth Kanji. Youre're almost done!
+14)This is the character for "sky".
+15The sky is so beautiful today!
+16)I think our character is feeling a bit
+thirsty. Let's go look for somewhere to
+find a drink.
+17)Trace the lines in the box to the right
+in the correct order to write your
+final Kanji.
+18)This is the character for "river".
+19)The scenery is so beautiful here!
+20)Congratulations on finishing the
+tutorial stage of the Kanji game!!
