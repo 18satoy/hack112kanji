@@ -12,19 +12,9 @@ class drawDialogueBox(PygameGame):
         self.boxHeight = 200
         self.dialogue = dialogueBox.dialogue(self.margin, self.margin + self.boxHeight * 2,
             self.boxWidth, self.boxHeight)
-<<<<<<< HEAD
         self.drawWindow = mouseTracking.drawWindow()
         self.step = 0
-        #self.
-
-    def redrawAll(self, screen):
-        self.dialogue.drawBox(screen)
-        #screen.blit(self.mouseWindow, (0, 0))
-
-
-=======
         self.gamePosition = 0
-        # self.mouseWindow = mouseTracking.window
 
     def keyPressed(self, keyCode, modifier):
         code = pygame.key.name(keyCode)
@@ -33,8 +23,7 @@ class drawDialogueBox(PygameGame):
 
     def redrawAll(self, screen):
         self.dialogue.drawBox(screen, self.dialogue.textImages, self.gamePosition)
-        # screen.blit(self.mouseWindow, (0, 0))
->>>>>>> 7df3e67f8366f9854e0e736600b4a15ff326dbb6
+        self.drawWindow.drawBox(screen)
 
 # class drawText(PygameGame):
 #     def init(self, filePath):
