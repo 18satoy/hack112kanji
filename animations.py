@@ -3,7 +3,7 @@ import pygame
 from pygamegame import PygameGame
 import dialogueBox
 
-class drawDialogue(PygameGame):
+class drawDialogueBox(PygameGame):
     def init(self):
         self.margin = 10
         self.boxWidth = 600
@@ -12,12 +12,12 @@ class drawDialogue(PygameGame):
             self.boxWidth, self.boxHeight)
 
     def redrawAll(self, screen):
-        self.dialogue.draw(screen)
+        self.dialogue.drawBox(screen)
 
-class drawText(PygameGame):
-    def init(self, filePath):
-        self.
+# class drawText(PygameGame):
+#     def init(self, filePath):
+#         self.
 
 
-game = drawDialogue(1000, 620)
+game = drawDialogueBox(1000, 620)
 game.run()
