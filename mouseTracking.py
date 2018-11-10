@@ -4,19 +4,19 @@
 import pygame
 from colorSheet import *
 from pygame.locals import *
+from objectClasses import *
 from sys import exit
 
 pygame.init()
 pygame.display.set_caption("Write Kanji!")
 clock = pygame.time.Clock()
-window = pygame.display.set_mode((500,500))
-writing = pygame.Surface((500,500))
+window = pygame.display.set_mode((300,200))
+writing = pygame.Surface((300,200))
 writing.fill(white)
 writing.set_alpha(150)
-chara = pygame.image.load("images/charaKi.jpg").convert()
+chara = pygame.image.load("images/Kanji/charaSora.png").convert()
 mouse_pos = None
 isDrawing = False
-canvasSize = (500,500)
 running = True
 
 class Brush(object):
@@ -38,7 +38,7 @@ try:
 
             if event.type == pygame.KEYDOWN:
                 if event.key == 114: #"r"
-                    window.fill(white)
+                    writing.fill(white)
 
             if isDrawing:
                 if event.type == pygame.MOUSEBUTTONDOWN and mouse_pos == None:
@@ -54,7 +54,7 @@ try:
                     mouse_pos = None
 
         pygame.display.update()
-        window.blit(chara,(0,0))
+        window.blit(chara,(50,0))
         window.blit(writing,(0,0))
 
     pygame.quit()
