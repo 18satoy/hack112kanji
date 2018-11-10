@@ -1,0 +1,6 @@
+Kanji
+
+Instruction:
+Press and drag your mouse to start writing.
+Press "r" to redo:)
+
