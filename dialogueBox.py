@@ -1,4 +1,5 @@
-from colorSheet import *
+import pygame
+import colorSheet
 
 class dialogue(object):
     def __init__(self, x, y, width, height):
@@ -9,5 +10,4 @@ class dialogue(object):
 
     def draw(self, screen):
         x, y, width, height = self.x, self.y, self.width, self.height
-        pygame.draw.rect(screen, (0, 0, 0), (x - width / 2, y - height / 2, 
-            x + width / 2, y + height / 2))
+        pygame.draw.rect(screen, colorSheet.darkGray, (x, y, width, height))
